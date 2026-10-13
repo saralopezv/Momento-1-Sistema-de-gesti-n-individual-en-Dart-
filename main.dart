@@ -103,6 +103,20 @@ void main() {
           print('Eliminado.');
         }
         break;
+      case '6':
+        Map<String, int> resumen = {};
+        for (var mem in listaMembresias) {
+          if (resumen.containsKey(mem.tipo)) {
+            resumen[mem.tipo] = resumen[mem.tipo]! + 1;
+          } else {
+            resumen[mem.tipo] = 1;
+          }
+        }
+        print('\n--- Resumen ---');
+        resumen.forEach((tipo, cantidad) {
+          print('$tipo: $cantidad');
+        });
+        break;
       case '0':
         print('Saliendo del programa...');
         continuar = false;
