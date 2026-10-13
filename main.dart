@@ -93,7 +93,10 @@ void main() {
         }
         if (index != -1) {
           listaMembresias.removeAt(index);
-          print('Eliminado.');
+          documentos.remove(docEliminar); // Arreglo: tambien quitarlo del set
+          print('Eliminado correctamente.');
+        } else {
+          print('No se encontro a la persona.');
         }
         break;
       case '6':
