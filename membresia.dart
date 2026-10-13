@@ -6,6 +6,6 @@ class Membresia {
   Membresia(this.documento, this.nombre, this.tipo);
 
   void mostrarInfo() {
-    print('Doc: $documento - Nombre: $nombre - Tipo: $tipo');
+    print('=> [MEMBRESIA] Documento: $documento | Nombre: $nombre | Tipo: $tipo');
   }
 }
