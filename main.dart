@@ -24,20 +24,20 @@ void main() {
     switch (opcion) {
       case '1':
         stdout.write('Ingrese documento: ');
-        String? doc = stdin.readLineSync();
+        String doc = stdin.readLineSync() ?? '';
         stdout.write('Ingrese nombre: ');
-        String? nom = stdin.readLineSync();
+        String nom = stdin.readLineSync() ?? '';
         stdout.write('Ingrese tipo (Mensual/Anual): ');
-        String? tipo = stdin.readLineSync();
+        String tipo = stdin.readLineSync() ?? '';
         
         if (documentos.contains(doc)) {
           print('Error: Ya existe una membresia con ese documento');
           break;
         }
         
-        Membresia nueva = Membresia(doc!, nom!, tipo!);
+        Membresia nueva = Membresia(doc, nom, tipo);
         listaMembresias.add(nueva);
-        documentos.add(doc!);
+        documentos.add(doc);
         print('Registrado correctamente.');
         break;
       case '2':
