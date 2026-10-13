@@ -14,6 +14,7 @@ class Membresia {
 
 void main() {
   List<Membresia> listaMembresias = [];
+  Set<String> documentos = {};
   bool continuar = true;
   
   while (continuar) {
@@ -40,8 +41,14 @@ void main() {
         stdout.write('Ingrese tipo (Mensual/Anual): ');
         String? tipo = stdin.readLineSync();
         
+        if (documentos.contains(doc)) {
+          print('Error: Ya existe una membresia con ese documento');
+          break;
+        }
+        
         Membresia nueva = Membresia(doc!, nom!, tipo!);
         listaMembresias.add(nueva);
+        documentos.add(doc!);
         print('Registrado correctamente.');
         break;
       case '2':
