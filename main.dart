@@ -80,6 +80,22 @@ void main() {
           }
         }
         break;
+      case '5':
+        stdout.write('Ingrese documento a eliminar: ');
+        String? docEliminar = stdin.readLineSync();
+        
+        int index = -1;
+        for (int i = 0; i < listaMembresias.length; i++) {
+          if (listaMembresias[i].documento == docEliminar) {
+            index = i;
+            break;
+          }
+        }
+        if (index != -1) {
+          listaMembresias.removeAt(index);
+          print('Eliminado.');
+        }
+        break;
       case '0':
         print('Saliendo del programa...');
         continuar = false;
