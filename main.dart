@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   print('SISTEMA DE GESTIÓN');
   print('-----------------------------');
@@ -10,4 +12,17 @@ void main() {
   print('0. Salir');
   print('-----------------------------');
   print('Seleccione una opción:');
+  
+  String? opcion = stdin.readLineSync();
+
+  switch (opcion) {
+    case '1':
+      print('Eligió registrar');
+      break;
+    case '0':
+      print('Saliendo...');
+      break;
+    default:
+      print('Opción no válida');
+  }
 }
