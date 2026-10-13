@@ -1,16 +1,5 @@
 import 'dart:io';
-
-class Membresia {
-  String documento;
-  String nombre;
-  String tipo;
-
-  Membresia(this.documento, this.nombre, this.tipo);
-
-  void mostrarInfo() {
-    print('Doc: $documento - Nombre: $nombre - Tipo: $tipo');
-  }
-}
+import 'membresia.dart';
 
 void main() {
   List<Membresia> listaMembresias = [];
