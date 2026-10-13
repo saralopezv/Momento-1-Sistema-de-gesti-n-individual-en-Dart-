@@ -13,6 +13,7 @@ class Membresia {
 }
 
 void main() {
+  List<Membresia> listaMembresias = [];
   bool continuar = true;
   
   while (continuar) {
