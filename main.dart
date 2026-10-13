@@ -27,6 +27,10 @@ void main() {
         String doc = stdin.readLineSync() ?? '';
         stdout.write('Ingrese nombre: ');
         String nom = stdin.readLineSync() ?? '';
+        if (nom.isEmpty) {
+          print('El nombre no puede estar vacio');
+          break;
+        }
         stdout.write('Ingrese tipo (Mensual/Anual): ');
         String tipo = stdin.readLineSync() ?? '';
         
