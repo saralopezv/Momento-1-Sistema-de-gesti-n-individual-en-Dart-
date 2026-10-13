@@ -66,6 +66,20 @@ void main() {
           print('No se encontró.');
         }
         break;
+      case '4':
+        stdout.write('Ingrese documento a modificar: ');
+        String? docMod = stdin.readLineSync();
+        for (var mem in listaMembresias) {
+          if (mem.documento == docMod) {
+            stdout.write('Nuevo nombre: ');
+            mem.nombre = stdin.readLineSync()!;
+            stdout.write('Nuevo tipo: ');
+            mem.tipo = stdin.readLineSync()!;
+            print('Modificado exitosamente.');
+            break;
+          }
+        }
+        break;
       case '0':
         print('Saliendo del programa...');
         continuar = false;
