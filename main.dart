@@ -44,6 +44,12 @@ void main() {
         listaMembresias.add(nueva);
         print('Registrado correctamente.');
         break;
+      case '2':
+        print('\n--- Lista de Membresias ---');
+        for (var mem in listaMembresias) {
+          mem.mostrarInfo();
+        }
+        break;
       case '0':
         print('Saliendo del programa...');
         continuar = false;
