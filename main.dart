@@ -33,7 +33,16 @@ void main() {
 
     switch (opcion) {
       case '1':
-        print('Eligió registrar');
+        stdout.write('Ingrese documento: ');
+        String? doc = stdin.readLineSync();
+        stdout.write('Ingrese nombre: ');
+        String? nom = stdin.readLineSync();
+        stdout.write('Ingrese tipo (Mensual/Anual): ');
+        String? tipo = stdin.readLineSync();
+        
+        Membresia nueva = Membresia(doc!, nom!, tipo!);
+        listaMembresias.add(nueva);
+        print('Registrado correctamente.');
         break;
       case '0':
         print('Saliendo del programa...');
