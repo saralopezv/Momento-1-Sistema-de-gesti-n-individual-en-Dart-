@@ -50,6 +50,22 @@ void main() {
           mem.mostrarInfo();
         }
         break;
+      case '3':
+        stdout.write('Ingrese documento a buscar: ');
+        String? docBuscar = stdin.readLineSync();
+        bool encontrado = false;
+        
+        for (var mem in listaMembresias) {
+          if (mem.documento == docBuscar) {
+            mem.mostrarInfo();
+            encontrado = true;
+            break;
+          }
+        }
+        if (!encontrado) {
+          print('No se encontró.');
+        }
+        break;
       case '0':
         print('Saliendo del programa...');
         continuar = false;
